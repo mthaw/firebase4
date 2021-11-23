@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
 
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="574.0">
+         <children>
+            <Text fill="#7022ff" layoutX="183.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identification">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <GridPane layoutX="113.0" layoutY="122.0" prefHeight="165.0" prefWidth="348.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nom d'usager:" />
+                  <Label text="Mot de passe:" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtuser" GridPane.columnIndex="1" />
+                  <PasswordField fx:id="txtpasse" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button layoutX="381.0" layoutY="324.0" mnemonicParsing="false" text="Nouveau" />
+            <Button layoutX="113.0" layoutY="324.0" mnemonicParsing="false" text="Connecter" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
