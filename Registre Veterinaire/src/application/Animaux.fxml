@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.AnimauxController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="574.0">
+         <children>
+            <Text fill="#00ff88" layoutX="91.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informations de l'Animal" wrappingWidth="391.04833984375">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <GridPane layoutX="91.0" layoutY="107.0" prefHeight="314.0" prefWidth="391.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nom:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Usager:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Passe:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Addresse:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Telephone:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Comportement:" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Age:" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tnom" GridPane.columnIndex="1" />
+                  <TextField fx:id="tusager" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tpasse" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="taddresse" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tphone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="tage" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="cbocpt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Button layoutX="415.0" layoutY="440.0" mnemonicParsing="false" text="Quitter" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
