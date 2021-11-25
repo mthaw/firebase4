@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.AnimauxController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnimauxController">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="574.0">
          <children>
@@ -66,13 +65,13 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tnom" GridPane.columnIndex="1" />
-                  <TextField fx:id="tusager" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="tpasse" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="taddresse" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="tphone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField fx:id="tage" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="cbocpt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="tnom" promptText="Nom du proprietaire" GridPane.columnIndex="1" />
+                  <TextField fx:id="tusager" promptText="Nom de l'animal" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tpasse" promptText="Mot de passe" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="taddresse" promptText="Addresse" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tphone" promptText="Telephone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="tage" promptText="Age" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="cbocpt" prefHeight="31.0" prefWidth="204.0" promptText="Comportement" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                </children>
             </GridPane>
             <Button layoutX="415.0" layoutY="440.0" mnemonicParsing="false" text="Quitter" />
