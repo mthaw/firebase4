@@ -8,13 +8,14 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
    <children>
-      <AnchorPane layoutY="-14.0" prefHeight="500.0" prefWidth="574.0">
+      <AnchorPane layoutX="5.0" layoutY="-7.0" prefHeight="500.0" prefWidth="574.0">
          <children>
             <Text fill="#ff308d" layoutX="166.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enregistrement">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
+            <Button fx:id="benregistrer" layoutX="392.0" layoutY="445.0" mnemonicParsing="false" onAction="#Register" text="Enregistrer" />
          </children>
       </AnchorPane>
       <GridPane layoutX="101.0" layoutY="104.0" prefHeight="314.0" prefWidth="391.0">
@@ -76,6 +77,5 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button fx:id="benregistrer" layoutX="425.0" layoutY="430.0" mnemonicParsing="false" text="Quitter" />
    </children>
 </AnchorPane>
