@@ -32,7 +32,7 @@
                </children>
             </GridPane>
             <Button layoutX="381.0" layoutY="324.0" mnemonicParsing="false" onAction="#Register" text="Nouveau" />
-            <Button layoutX="113.0" layoutY="324.0" mnemonicParsing="false" onAction="#MainFenetre" text="Connecter" />
+            <Button layoutX="113.0" layoutY="324.0" mnemonicParsing="false" onAction="#Connect" text="Connecter" />
          </children>
       </AnchorPane>
    </children>

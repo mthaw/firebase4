@@ -13,6 +13,8 @@ import com.firebase.client.ValueEventListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -43,7 +45,7 @@ public class LoginController implements Initializable {
     	Main.loginStage.close();
     }
     
-    public void Connect(ActionEvent event) {
+    public void Connect(ActionEvent event) throws InterruptedException {
     	Firebase firebase = new Firebase("https://martinfiletest-default-rtdb.firebaseio.com/");
     	firebase.child("animaux").addListenerForSingleValueEvent(new ValueEventListener() {
 			
@@ -51,7 +53,12 @@ public class LoginController implements Initializable {
 			public void onDataChange(DataSnapshot dataSnapshot) {
 				for(DataSnapshot data: dataSnapshot.getChildren()) {
 					Animal animal = data.getValue(Animal.class);
-					if(animal.getUser().equals(txtuser.getText()) && animal.getPasse().equals(txtpasse.getText())) {
+					String Fanimal = animal.getUser();
+					String Fpasse = animal.getPasse();
+					String Tuser = txtuser.getText();
+					String Tpasse = txtpasse.getText();
+					//if(animal.getUser().equals(txtuser.getText()) && animal.getPasse().equals(txtpasse.getText())) {
+					if(Fanimal.equals(Tuser) && Fpasse.equals(Tpasse)) {
 						animal.setId(data.getKey());
 						animalFound=1;
 						currentAnimal=animal;
@@ -65,10 +72,22 @@ public class LoginController implements Initializable {
 				
 			}
 		});
+    	Thread.sleep(2000);
+    	
+    	if(animalFound==1) {
+    		MainFenetre();
+    	}else {
+    		Alert alert = new Alert(AlertType.ERROR);
+    		alert.setHeaderText("Erreur");
+    		alert.setTitle("Erreur");
+    		alert.setContentText("Usager n'a pas ete trouve");
+    		alert.show();
+    	}
     }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		animauxList = new ArrayList();
 	}
+	
 }
